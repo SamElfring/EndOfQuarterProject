@@ -5,7 +5,7 @@ def print_game_rules():
 """\nThe rules are simple, we've scattered several objects around Enschede.
 Every object has a code on it, which you'll have to add to the list.
 When you've added every code to the list you're able to guess the password.
-The team that guesses the password first wins the game.""") #condition: you need to find all 4 objects to guess the password
+The team that guesses the password first wins the game.""")
     return
 
 def guess_password(object_codes_list):
@@ -19,7 +19,7 @@ The password is a sentence and the spaces are replaced by underscores('_').""")
 
     while True:
         password_input = input("Enter the password: ")
-        if password_input == sha.password_input: #in module?
+        if password_input == sha.password_input:
             victory()
             exit()
         else:
@@ -36,10 +36,6 @@ def scavenger_hunt_main():
 
     object_codes_list = []
     while True:
-        #print rules
-        #add code to list
-        #print obtained codes
-        #Guess the password
         try:
             menu_input = int(input("""
 1. Show rules again
@@ -55,14 +51,13 @@ Please select an option: """))
             print_game_rules()
 
         elif menu_input == 2:
-            #Have it so you can only add the precise codes
             while True:
                 add_code = input("\nEnter the code written on the item you've hunted (enter 'exit' to return to the menu): ")
 
                 if add_code.lower() == "exit":
                     break
 
-                if add_code ==  sha.add_code_1 or add_code == sha.add_code_2 or add_code == sha.add_code_3 or add_code == sha.add_code_4: #in een module?
+                if add_code ==  sha.add_code_1 or add_code == sha.add_code_2 or add_code == sha.add_code_3 or add_code == sha.add_code_4:
                     if add_code in object_codes_list:
                         print("\nThe code has already been added to the list!")
                         pass
