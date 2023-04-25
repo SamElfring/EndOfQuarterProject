@@ -1,3 +1,9 @@
+TITLE = """\n
+  ___  __   __ _  __ _  ____  ___  ____    ____  __   _  _  ____ 
+ / __)/  \ (  ( \(  ( \(  __)/ __)(_  _)  (  __)/  \ / )( \(  _ \\
+( (__(  O )/    //    / ) _)( (__   )(     ) _)(  O )) \/ ( )   /
+ \___)\__/ \_)__)\_)__)(____)\___) (__)   (__)  \__/ \____/(__\_)
+"""
 RULES = """\nRULES:
     1. Players must connect 4 of the same characters (X or O) in a row to win.
     2. Only one piece is played at a time.
@@ -8,8 +14,8 @@ RULES = """\nRULES:
 WIDTH = 7
 HEIGHT = 6
 
-def connect_four(team1, team2):
-    print("\nConnect Four")
+def play(team1, team2):
+    print(TITLE)
     print(RULES)
     print("\nThe board looks like this:")
     board = [[' ' for i in range(WIDTH)] for i in range(HEIGHT)]
@@ -35,6 +41,7 @@ def connect_four(team1, team2):
         if current_turn > 3 and check_win(board, char):
             print("\nWe have a winner")
             print(f"{current_team['name']} has won!")
+            current_team["points"] += 1
             break
         current_turn += 1
 
@@ -83,15 +90,3 @@ def draw_board(board):
     for i in range(len(board[0])):
         numbers += f"  {i + 1} "
     print(numbers)
-
-
-connect_four({
-        "name": "Team1",
-        "members": ["Henk", "Jan"],
-        "points": 0
-    },
-    {
-        "name": "Team2",
-        "members": ["Pieter", "Joost"],
-        "points": 0
-    })
