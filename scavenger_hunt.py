@@ -1,3 +1,5 @@
+import scavenger_hunt_answers as sha
+
 def print_game_rules():
     print(
 """\nThe rules are simple, we've scattered several objects around Enschede.
@@ -17,15 +19,16 @@ The password is a sentence and the spaces are replaced by underscores('_').""")
 
     while True:
         password_input = input("Enter the password: ")
-        if password_input == "Welcome_to_SD42!": #in module?
+        if password_input == sha.password_input: #in module?
             victory()
             exit()
         else:
-            print(f"Your guess is incorrect! \nPlease try again! \nReminder: {object_codes_list}")
+            print(f"Your guess is incorrect, please try again! \n\nReminder: {object_codes_list}")
 
 
 def victory():
     print("Victory!")
+    #add 1 point to the winning team
 
 def scavenger_hunt_main():
     print("Welcome to the scavenger hunt!")
@@ -59,7 +62,7 @@ Please select an option: """))
                 if add_code.lower() == "exit":
                     break
 
-                if add_code ==  "o_S" or add_code == "ome_t" or add_code == "Welc" or add_code == "D42!": #in een module?
+                if add_code ==  sha.add_code_1 or add_code == sha.add_code_2 or add_code == sha.add_code_3 or add_code == sha.add_code_4: #in een module?
                     if add_code in object_codes_list:
                         print("\nThe code has already been added to the list!")
                         pass
@@ -70,14 +73,14 @@ Please select an option: """))
                         print("\nCongratulations, you've obtained and entered every code to the list, you are now able to guess the password!")
                         break
 
-                    add_code_again = input("Do you want to enter another code? [y/n] ")
+                    # add_code_again = input("Do you want to enter another code? [y/n] ")
                     
-                    if add_code_again.lower() == "y":
-                        continue
-                    elif add_code_again.lower() == "n":
-                        break
-                    else:
-                        print("Please enter a valid input!")
+                    # if add_code_again.lower() == "y":
+                    #     continue
+                    # elif add_code_again.lower() == "n":
+                    #     break
+                    # else:
+                    #     print("Please enter a valid input!")
                 else:
                     print("\nPlease correctly enter the code written on the object!")
 

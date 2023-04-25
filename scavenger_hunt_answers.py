@@ -1,0 +1,5 @@
+password_input = "Welcome_to_SD42!"
+add_code_1 = "Welc"
+add_code_2 = "ome_t"
+add_code_3 = "o_S"
+add_code_4 = "D42!"
