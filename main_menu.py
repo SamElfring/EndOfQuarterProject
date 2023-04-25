@@ -1,18 +1,34 @@
+import connect_four
+
 def main():
     title = """
      _____       _    _____ ___    _____             _              _____           _         _   
     |   __|___ _| |  |     |  _|  |     |_ _ ___ ___| |_ ___ ___   |  _  |___ ___  |_|___ ___| |_ 
     |   __|   | . |  |  |  |  _|  |  |  | | | .'|  _|  _| -_|  _|  |   __|  _| . | | | -_|  _|  _|
     |_____|_|_|___|  |_____|_|    |__  _|___|__,|_| |_| |___|_|    |__|  |_| |___|_| |___|___|_|  
-                                    |__|                                        |___|            
+                                     |__|                                        |___|            
+
+    Made By:
+    - Thijs Bakker
+    - Jeremy de Groot
+    - Jenny Nalband
+    - Sam Elfring                                    
     """
     print(title)
 
+    print("Team 1:")
     team1 = create_team()
+    print("\nTeam 2:")
+    team2 = create_team()
 
     # TODO: Print manual
 
-    # TODO: Start games
+    # Start games
+    input(
+        "\nThe next game is Connect Four! " +
+        "\nPress any key to start"
+    )
+    connect_four.play(team1, team2)
 
     # TODO: Print winner
 
