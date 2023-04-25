@@ -11,14 +11,14 @@ RULES = """\nRULES:
     
     Team 1 is: X
     Team 2 is: O"""
-WIDTH = 7
-HEIGHT = 6
+BOARD_WIDTH = 7
+BOARD_HEIGHT = 6
 
 def play(team1, team2):
     print(TITLE)
     print(RULES)
     print("\nThe board looks like this:")
-    board = [[' ' for i in range(WIDTH)] for i in range(HEIGHT)]
+    board = [[' ' for i in range(BOARD_WIDTH)] for i in range(BOARD_HEIGHT)]
     draw_board(board)
     
     current_turn = 0
@@ -47,8 +47,8 @@ def play(team1, team2):
 
 
 def check_win(board, char):
-    for w in range(WIDTH):
-        for h in range(HEIGHT):
+    for w in range(BOARD_WIDTH):
+        for h in range(BOARD_HEIGHT):
             # Check horizontal
             try:
                 if board[h][w] == char and board[h][w + 1] == char and board[h][w + 2] == char and board[h][w + 3] == char:
@@ -58,6 +58,24 @@ def check_win(board, char):
             # Check vertical
             try:
                 if board[h][w] == char and board[h + 1][w] == char and board[h + 2][w] == char and board[h + 3][w] == char:
+                    return True
+            except IndexError:
+                pass
+
+    # Check diagonal from left to right
+    for h in range(BOARD_HEIGHT - 3):
+        for w in range(BOARD_WIDTH - 3):
+            try:
+                if board[h][w] == char and board[h+1][w+1] == char and board[h+2][w+2] == char and board[h+3][w+3] == char:
+                    return True
+            except IndexError:
+                pass
+
+    # Check diagonal from right to left
+    for h in range(BOARD_HEIGHT - 3):
+        for w in range(3, BOARD_WIDTH):
+            try:
+                if board[h][w] == char and board[h+1][w-1] == char and board[h+2][w-2] == char and board[h+3][w-3] == char:
                     return True
             except IndexError:
                 pass
