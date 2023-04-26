@@ -55,11 +55,15 @@ def main():
     next_game("Scavenger Hunt")
     scavenger_hunt.scavenger_hunt_main(team1, team2)
 
+    print("\n-----")
     print("This round is only for team " + team1["name"])
+    print("-----")
     next_game("Quiz")
     team1["points"] += quiz.run_quiz()
 
+    print("\n-----")
     print("This round is only for team " + team2["name"])
+    print("-----")
     next_game("Quiz")
     team2["points"] += quiz.run_quiz()
 
@@ -68,15 +72,20 @@ def main():
     print("\nAll games have concluded!")
     print("And the winner is:\n")
     if team1["points"] > team2["points"]:
-        print(team1["name"])
+        print_winner(team1["name"])
     elif team1["points"] < team2["points"]:
-        print(team2["name"])
+        print_winner(team2["name"])
     else:
         print("It is a draw!")
 
     print("\nResults:")
     print(f"Team: {team1['name']} ended with {team1['points']} total points!")
     print(f"Team: {team2['name']} ended with {team2['points']} total points!")
+
+
+def print_winner(name):
+    print(name)
+    print('‾' * len(name))
 
 
 def next_game(name):
