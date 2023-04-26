@@ -1,6 +1,7 @@
 import connect_four
 import higher_lower
 import quiz
+import scavenger_hunt
 
 TITLE = """
  _____       _    _____ ___    _____             _              _____           _         _   
@@ -50,6 +51,8 @@ def main():
 
     next_game("Connect Four")
     connect_four.play(team1, team2)
+
+    scavenger_hunt.scavenger_hunt_main(team1, team2)
 
     print("This round is only for team " + team1["name"])
     next_game("Quiz")

@@ -59,7 +59,7 @@ def victory():
 
 
 
-def scavenger_hunt_main():
+def scavenger_hunt_main(team1, team2):
     subprocess.Popen(
     ['xdg-open', "SH_Locations.png"],
     stdout=subprocess.DEVNULL,
