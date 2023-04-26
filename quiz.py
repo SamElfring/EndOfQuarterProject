@@ -28,6 +28,7 @@ def run_quiz():
     else:
         print("\nHelaas! Je hebt niet gewonnen!")
     print(f"You got {num_correct} correct out of {num} questions")
+    return num_correct
 
 
 def prepare_questions(path, num_questions):

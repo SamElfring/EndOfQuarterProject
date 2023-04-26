@@ -1,6 +1,7 @@
 import connect_four
 import higher_lower
 import quiz
+import scavenger_hunt
 
 TITLE = """
  _____       _    _____ ___    _____             _              _____           _         _   
@@ -26,10 +27,10 @@ RESULTS = """\n
 
 MANUAL = """\nOur project consist out of 4 small minigames.
 These minigames are
-    - Quiz (1 point per answer)
     - Higher Lower (1 point per answer)
     - Connect Four (5 points for the winner)
     - Scavenger Hunt (5 points for the winner)
+    - Quiz (1 point per answer)
 
 The two teams will play each other for points,
 the team with the most points at the end is the winner!    
@@ -45,14 +46,22 @@ def main():
     print(MANUAL)
 
     # Start games
-    next_game("Quiz")
-    quiz.run_quiz()
-
     next_game("Higher Lower")
     higher_lower.play_higher_lower(team1, team2)
 
     next_game("Connect Four")
     connect_four.play(team1, team2)
+
+    next_game("Scavenger Hunt")
+    scavenger_hunt.scavenger_hunt_main(team1, team2)
+
+    print("This round is only for team " + team1["name"])
+    next_game("Quiz")
+    team1["points"] += quiz.run_quiz()
+
+    print("This round is only for team " + team2["name"])
+    next_game("Quiz")
+    team2["points"] += quiz.run_quiz()
 
     # Print Winner
     print(RESULTS)
@@ -102,6 +111,9 @@ def create_team():
 
         if amount_of_team_members <= 0:
             print("Error: Team must have 1 or more members")
+            continue
+        if amount_of_team_members > 5:
+            print("Error: Team cannot contain more than 5 members")
             continue
         break
 
