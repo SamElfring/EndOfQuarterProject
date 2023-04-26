@@ -12,6 +12,10 @@ hl_title = """
 
 
 """
+hl_rules = """
+Each team will take turns guessing, which person or objects has more in a certain category. 
+When a guess is correct 1 point will be awarded to the team, enter your guess exactly how to options are shown.
+"""
 # Define categories in a dictionary
 categories = {
 	"Instagram Followers": {"Eminem": 39, "Adidas":  25,},
@@ -29,6 +33,7 @@ categories = {
 # Define a function to play the Higher/Lower game between two teams
 def play_higher_lower(team1, team2):
     print(hl_title)
+    print(hl_rules)
     # Initialize scores and current team
     team1_score = 0
     team2_score = 0
