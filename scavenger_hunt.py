@@ -204,4 +204,3 @@ IT'S THE OPPOSING TEAM'S TURN NOW! (if they're present)""")
                     t2_attempt = 0
             else:
                 print("\nNone of the lists are complete yet, please add all the codes to your team's list!")
-scavenger_hunt_main()
