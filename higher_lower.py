@@ -26,9 +26,9 @@ categories = {
     "Weight ": {"Hippo ": 1500, "Rhino": 1600},
 }
 
-print(hl_title)
 # Define a function to play the Higher/Lower game between two teams
 def play_higher_lower(team1, team2):
+    print(hl_title)
     # Initialize scores and current team
     team1_score = 0
     team2_score = 0
@@ -36,7 +36,7 @@ def play_higher_lower(team1, team2):
     
     # Loop through each category and ask the teams to guess the higher option
     for category, options in categories.items():
-        print(f"\n{team1} vs {team2}: Which/Who has more {category}?")
+        print(f"\n{team1['name']} vs {team2['name']}: Which/Who has more {category}?")
         for option, value in options.items():
             print(option)
         guess = input(f"\nTeam {current_team}, enter your guess: ")
@@ -52,19 +52,18 @@ def play_higher_lower(team1, team2):
         else:
             print(f"Incorrect. The correct answer is {correct_option}.")
         # Print the current scores
-        print(f"\n{team1}: {team1_score} | {team2}: {team2_score}")
+        print(f"\n{team1['name']}: {team1_score} | {team2['name']}: {team2_score}")
         # Switch to the other team
         current_team = 1 if current_team == 2 else 2
     
     # Print the final scores and the winner
     if team1_score > team2_score:
-        print(f"\n{team1} wins with a score of {team1_score} to {team2_score}!")
+        print(f"\n{team1['name']} wins with a score of {team1_score} to {team2_score}!")
     elif team2_score > team1_score:
-        print(f"\n{team2} wins with a score of {team2_score} to {team1_score}!")
+        print(f"\n{team2['name']} wins with a score of {team2_score} to {team1_score}!")
     else:
         print(f"\nThe game ended in a tie with a score of {team1_score} to {team2_score}!")
+
+    team1["points"] = team1_score
+    team2["points"] = team2_score
     return
-play_higher_lower(team1, team2)
-
-
-
