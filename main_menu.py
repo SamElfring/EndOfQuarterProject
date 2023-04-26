@@ -1,4 +1,5 @@
 import connect_four
+import higher_lower
 
 def main():
     title = """
@@ -16,6 +17,7 @@ def main():
     """
     print(title)
 
+
     print("Team 1:")
     team1 = create_team()
     print("\nTeam 2:")
@@ -29,6 +31,12 @@ def main():
         "\nPress any key to start"
     )
     connect_four.play(team1, team2)
+
+    input(
+        "\nThe next game is Higher Lower! " +
+        "\nPress any key to start"
+    )
+    higher_lower.play_higher_lower(team1, team2)
 
     # TODO: Print winner
 
