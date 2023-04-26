@@ -1,0 +1,11 @@
+t1_password_input = "Welcome_to_SD42!"
+t1_add_code_1 = "Welc"
+t1_add_code_2 = "ome_t"
+t1_add_code_3 = "o_S"
+t1_add_code_4 = "D42!"
+
+t2_password_input = "Software_Development"
+t2_add_code_1 = "So"
+t2_add_code_2 = "ftwa"
+t2_add_code_3 = "re_Devel"
+t2_add_code_4 = "opment"
