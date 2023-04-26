@@ -139,7 +139,7 @@ IT'S THE OPPOSING TEAM'S TURN NOW! (if they're present)""")
                         break
 
         elif menu_input == 4:
-            oprint_obtained_codes = print(f"These are the codes you've obtained so far: {t1_object_codes_list}")
+            print_obtained_codes = print(f"These are the codes you've obtained so far: {t1_object_codes_list}")
             if len(t1_object_codes_list) == 4:
                 print("\nCongratulations Team 1, you've obtained and entered every code to the list, you are now able to guess the password!")
         
@@ -187,7 +187,7 @@ IT'S THE OPPOSING TEAM'S TURN NOW! (if they're present)""")
                         break
 
         elif menu_input == 6:
-            oprint_obtained_codes = print(f"These are the codes you've obtained so far: {t2_object_codes_list}")
+            print_obtained_codes = print(f"These are the codes you've obtained so far: {t2_object_codes_list}")
             if len(t2_object_codes_list) == 4:
                 print("\nCongratulations Team 2, you've obtained and entered every code to the list, you are now able to guess the password!")
 
