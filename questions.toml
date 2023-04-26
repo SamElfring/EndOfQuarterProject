@@ -1,88 +1,84 @@
 [[questions]]
-question     = "Welke kleur heeft 30% van de M&M’s in een normale zak M&M’s?"
-answers      = ["Bruin"]
-alternatives = ["Rood", "Geel", "Blauw"]
+question = "What color are 30% of the M&M's in a regular bag of M&M's?"
+answers = ["Brown"]
+alternatives = ["Red", "Yellow", "Blue"]
 
 [[questions]]
-question     = "Hoeveel frikandellen eet een Nederlander gemiddeld per jaar? "
-answers      = ["37"]
+question = "How many 'frikandellen' does the average Dutch person eat per year?"
+answers = ["37"]
 alternatives = ["42", "50", "1000"]
 
 [[questions]]
-question = "Welke lekkernij wordt in het Engels “Dutch Doughnut” genoemd?"
-answers = ["oliebol", "Donut"]
+question = "What is the English name for the Dutch pastry 'oliebol'?"
+answers = ["Dutch Doughnut", "Donut"]
 alternatives = [
-    "Stroopwafel",
-    "Hamburger"]
+"Stroopwafel",
+"Hamburger"]
 
 [[questions]]
-question     = "Waar komt de enige echte champagne vandaan?"
-answers      = ["Frankrijk"]
-alternatives = ["Amerika", "Spanje", "Portugal"]
+question = "Where does the authentic champagne come from?"
+answers = ["France"]
+alternatives = ["United States", "Spain", "Portugal"]
 
 [[questions]]
-question = "Wie knipperen er vaker met hun ogen, mannen of vrouwen?"
-answers = ["Vrouwen"]
+question = "Who blinks more often, men or women?"
+answers = ["Women"]
 alternatives = [
-    "Mannen",
-    "Evenveel",
-    "Huh knipperen?",
+"Men",
+"Both equally",
+"Huh, blink?"]
+
+[[questions]]
+question = "What grape varieties are used in a regular champagne?"
+answers = ["Chardonnay, Pinot Noir, Pinot Meunier"]
+alternatives = ["Sauvignon Blanc and Pinot Noir", "Chardonnay", "Chardonnay and Pinot Noir"]
+
+[[questions]]
+question = "How long does it take the ISS to orbit the Earth?"
+answers = ["1 hour and 30 minutes", "1.5 hours"]
+alternatives = [
+"30 minutes",
+"5 hours",
+"12 hours",
 ]
 
 [[questions]]
-question     = "Uit welke druivenrassen bestaat een reguliere champagne?"
-answers      = ["Chardonney, Pinot Noir, Pinot Meunier"]
-alternatives = ["Sauvignon blanc en Pinot Noir", "Chardonney", "Chardonney en Pinot Noir"]
-
-[[questions]]
-question = "Hoelang doet het ISS erover om een rondje rond de aarde te doen?"
-answers = ["1u30"]
-alternatives = [
-    "30 min",
-    "5u",
-    "12u",
-]
-
-[[questions]]
-question = "Wat is de heetste peper ter wereld?"
+question = "What is the hottest pepper in the world?"
 answers = ["Carolina Reaper"]
 alternatives = [
-    "Ghost pepper (Bhut Jolokia)",
-    "Trinidad Moruga Scorpion",
-    "Naga Viper",
+"Ghost Pepper (Bhut Jolokia)",
+"Trinidad Moruga Scorpion",
+"Naga Viper",
 ]
 
 [[questions]]
-question     = "Wat is het hoofdingrediënt van bier?"
-answers      = ["Water"]
-alternatives = ["Hop", "Alcohol", "Graan"]
+question = "What is the main ingredient in beer?"
+answers = ["Water"]
+alternatives = ["Hops", "Alcohol", "Grain"]
 
 [[questions]]
-question     = "Hoeveel zintuigen heeft een mens?"
-answers      = ["5"]
+question = "How many senses does a human have?"
+answers = ["5"]
 alternatives = ["6", "7", "4"]
 
 [[questions]]
-question     = "In welk land worden de meeste ijsjes gegeten?"
-answers      = ["Noorwegen"]
-alternatives = ["Amerika", "Nederland"]
+question = "In which country are the most ice creams eaten?"
+answers = ["Norway"]
+alternatives = ["United States", "Netherlands"]
 
 [[questions]]
-question = "Waar vindt de meeste alcohol consumptie ter wereld per inwoner plaats?"
-answers = ["Moldavië"]
+question = "Where is the highest alcohol consumption per capita in the world?"
+answers = ["Moldova"]
 alternatives = [
-    "Rusland",
-    "Nederland",
-    "Frankrijk",
+"Russia",
+"Netherlands",
+"France",
 ]
 
 [[questions]]
-question = "Welk Italiaans gerecht betekent letterlijk “trek mij omhoog”?"
+question = "Which Italian dish literally means 'pick me up'?"
 answers = ["Tiramisu"]
 alternatives = [
-    "Pizza",
-    "Cannoli",
-    "Panna cotta"
-]
-
-
+"Pizza",
+"Cannoli",
+"Panna Cotta"]
