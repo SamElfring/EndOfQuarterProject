@@ -1,23 +1,30 @@
 import connect_four
 import higher_lower
 
-def main():
-    title = """
-     _____       _    _____ ___    _____             _              _____           _         _   
-    |   __|___ _| |  |     |  _|  |     |_ _ ___ ___| |_ ___ ___   |  _  |___ ___  |_|___ ___| |_ 
-    |   __|   | . |  |  |  |  _|  |  |  | | | .'|  _|  _| -_|  _|  |   __|  _| . | | | -_|  _|  _|
-    |_____|_|_|___|  |_____|_|    |__  _|___|__,|_| |_| |___|_|    |__|  |_| |___|_| |___|___|_|  
-                                     |__|                                        |___|            
-
-    Made By:
+TITLE = """
+ _____       _    _____ ___    _____             _              _____           _         _   
+|   __|___ _| |  |     |  _|  |     |_ _ ___ ___| |_ ___ ___   |  _  |___ ___  |_|___ ___| |_ 
+|   __|   | . |  |  |  |  _|  |  |  | | | .'|  _|  _| -_|  _|  |   __|  _| . | | | -_|  _|  _|
+|_____|_|_|___|  |_____|_|    |__  _|___|__,|_| |_| |___|_|    |__|  |_| |___|_| |___|___|_|  
+                                    |__|                                        |___|            
+Made By:
     - Thijs Bakker
     - Jeremy de Groot
     - Jenny Nalband
-    - Sam Elfring                                    
-    """
-    print(title)
+    - Sam Elfring   
+"""
 
+RESULTS = """\n
+  _______ _            _____                 _ _       
+ |__   __| |          |  __ \               | | |      
+    | |  | |__   ___  | |__) |___  ___ _   _| | |_ ___ 
+    | |  | '_ \ / _ \ |  _  // _ \/ __| | | | | __/ __|
+    | |  | | | |  __/ | | \ \  __/\__ \ |_| | | |_\__ \\
+    |_|  |_| |_|\___| |_|  \_\___||___/\__,_|_|\__|___/
+"""
 
+def main():
+    print(TITLE)
     print("Team 1:")
     team1 = create_team()
     print("\nTeam 2:")
@@ -38,7 +45,20 @@ def main():
     )
     higher_lower.play_higher_lower(team1, team2)
 
-    # TODO: Print winner
+    # Print Winner
+    print(RESULTS)
+    print("\nAll games have concluded!")
+    print("And the winner is:\n")
+    if team1["points"] > team2["points"]:
+        print(team1["name"])
+    elif team1["points"] < team2["points"]:
+        print(team2["name"])
+    else:
+        print("It is a draw!")
+
+    print("\nResults:")
+    print(f"Team: {team1['name']} ended with {team1['points']} total points!")
+    print(f"Team: {team2['name']} ended with {team2['points']} total points!")
 
 
 def create_team():
