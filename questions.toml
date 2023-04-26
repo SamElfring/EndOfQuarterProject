@@ -1,0 +1,88 @@
+[[questions]]
+question     = "Welke kleur heeft 30% van de M&M’s in een normale zak M&M’s?"
+answers      = ["Bruin"]
+alternatives = ["Rood", "Geel", "Blauw"]
+
+[[questions]]
+question     = "Hoeveel frikandellen eet een Nederlander gemiddeld per jaar? "
+answers      = ["37"]
+alternatives = ["42", "50", "1000"]
+
+[[questions]]
+question = "Welke lekkernij wordt in het Engels “Dutch Doughnut” genoemd?"
+answers = ["oliebol", "Donut"]
+alternatives = [
+    "Stroopwafel",
+    "Hamburger"]
+
+[[questions]]
+question     = "Waar komt de enige echte champagne vandaan?"
+answers      = ["Frankrijk"]
+alternatives = ["Amerika", "Spanje", "Portugal"]
+
+[[questions]]
+question = "Wie knipperen er vaker met hun ogen, mannen of vrouwen?"
+answers = ["Vrouwen"]
+alternatives = [
+    "Mannen",
+    "Evenveel",
+    "Huh knipperen?",
+]
+
+[[questions]]
+question     = "Uit welke druivenrassen bestaat een reguliere champagne?"
+answers      = ["Chardonney, Pinot Noir, Pinot Meunier"]
+alternatives = ["Sauvignon blanc en Pinot Noir", "Chardonney", "Chardonney en Pinot Noir"]
+
+[[questions]]
+question = "Hoelang doet het ISS erover om een rondje rond de aarde te doen?"
+answers = ["1u30"]
+alternatives = [
+    "30 min",
+    "5u",
+    "12u",
+]
+
+[[questions]]
+question = "Wat is de heetste peper ter wereld?"
+answers = ["Carolina Reaper"]
+alternatives = [
+    "Ghost pepper (Bhut Jolokia)",
+    "Trinidad Moruga Scorpion",
+    "Naga Viper",
+]
+
+[[questions]]
+question     = "Wat is het hoofdingrediënt van bier?"
+answers      = ["Water"]
+alternatives = ["Hop", "Alcohol", "Graan"]
+
+[[questions]]
+question     = "Hoeveel zintuigen heeft een mens?"
+answers      = ["5"]
+alternatives = ["6", "7", "4"]
+
+[[questions]]
+question     = "In welk land worden de meeste ijsjes gegeten?"
+answers      = ["Noorwegen"]
+alternatives = ["Amerika", "Nederland"]
+
+[[questions]]
+question = "Waar vindt de meeste alcohol consumptie ter wereld per inwoner plaats?"
+answers = ["Moldavië"]
+alternatives = [
+    "Rusland",
+    "Nederland",
+    "Frankrijk",
+]
+
+[[questions]]
+question = "Welk Italiaans gerecht betekent letterlijk “trek mij omhoog”?"
+answers = ["Tiramisu"]
+alternatives = [
+    "Pizza",
+    "Cannoli",
+    "Panna cotta"
+]
+
+
