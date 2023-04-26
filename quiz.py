@@ -22,11 +22,6 @@ def run_quiz():
     for num, question in enumerate(questions, start=1):
         print(f"\nQuestion {num}:")
         num_correct += ask_question(question)
-
-    if num_correct >= 6:
-        print("\n ⭐ Gefeliciteerd! Je hebt gewonnen! ⭐")
-    else:
-        print("\nHelaas! Je hebt niet gewonnen!")
     print(f"You got {num_correct} correct out of {num} questions")
     return num_correct
 
