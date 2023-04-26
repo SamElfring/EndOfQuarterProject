@@ -41,7 +41,7 @@ def play(team1, team2):
         if current_turn > 3 and check_win(board, char):
             print("\nWe have a winner")
             print(f"{current_team['name']} has won!")
-            current_team["points"] += 1
+            current_team["points"] += 5
             break
         current_turn += 1
 

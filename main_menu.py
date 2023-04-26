@@ -1,5 +1,7 @@
 import connect_four
 import higher_lower
+import quiz
+import scavenger_hunt
 
 TITLE = """
  _____       _    _____ ___    _____             _              _____           _         _   
@@ -23,6 +25,17 @@ RESULTS = """\n
     |_|  |_| |_|\___| |_|  \_\___||___/\__,_|_|\__|___/
 """
 
+MANUAL = """\nOur project consist out of 4 small minigames.
+These minigames are
+    - Higher Lower (1 point per answer)
+    - Connect Four (5 points for the winner)
+    - Scavenger Hunt (5 points for the winner)
+    - Quiz (1 point per answer)
+
+The two teams will play each other for points,
+the team with the most points at the end is the winner!    
+"""
+
 def main():
     print(TITLE)
     print("Team 1:")
@@ -30,29 +43,38 @@ def main():
     print("\nTeam 2:")
     team2 = create_team()
 
-    # TODO: Print manual
+    print(MANUAL)
 
     # Start games
-    input(
-        "\nThe next game is Connect Four! " +
-        "\nPress any key to start"
-    )
+    next_game("Higher Lower")
+    higher_lower.play_higher_lower(team1, team2)
+
+    next_game("Connect Four")
     connect_four.play(team1, team2)
 
-    input(
-        "\nThe next game is Higher Lower! " +
-        "\nPress any key to start"
-    )
-    higher_lower.play_higher_lower(team1, team2)
+    next_game("Scavenger Hunt")
+    scavenger_hunt.scavenger_hunt_main(team1, team2)
+
+    print("\n-----")
+    print("This round is only for team " + team1["name"])
+    print("-----")
+    next_game("Quiz")
+    team1["points"] += quiz.run_quiz()
+
+    print("\n-----")
+    print("This round is only for team " + team2["name"])
+    print("-----")
+    next_game("Quiz")
+    team2["points"] += quiz.run_quiz()
 
     # Print Winner
     print(RESULTS)
     print("\nAll games have concluded!")
     print("And the winner is:\n")
     if team1["points"] > team2["points"]:
-        print(team1["name"])
+        print_winner(team1["name"])
     elif team1["points"] < team2["points"]:
-        print(team2["name"])
+        print_winner(team2["name"])
     else:
         print("It is a draw!")
 
@@ -61,13 +83,32 @@ def main():
     print(f"Team: {team2['name']} ended with {team2['points']} total points!")
 
 
+def print_winner(name):
+    print(name)
+    print('‾' * len(name))
+
+
+def next_game(name):
+    input(
+        f"\nThe next game is {name}! " +
+        "\nPress Enter to start"
+    )
+
+
 def create_team():
     team = {
         "name": "",
         "members": [],
         "points": 0
     }
-    team["name"] = input("\nWhat is the name of your team? ")
+    while True:
+        team_name = input("\nWhat is the name of your team? ")
+        if not team_name:
+            print("Error: Name must be 1 character or longer")
+            continue
+        team["name"] = team_name
+        break
+
     while True:
         amount_of_team_members = input("How many members does your team have? ")
 
@@ -79,6 +120,9 @@ def create_team():
 
         if amount_of_team_members <= 0:
             print("Error: Team must have 1 or more members")
+            continue
+        if amount_of_team_members > 5:
+            print("Error: Team cannot contain more than 5 members")
             continue
         break
 
