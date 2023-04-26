@@ -23,7 +23,11 @@ def run_quiz():
         print(f"\nQuestion {num}:")
         num_correct += ask_question(question)
 
-    print(f"\nYou got {num_correct} correct out of {num} questions")
+    if num_correct >= 6:
+        print("\n ⭐ Gefeliciteerd! Je hebt gewonnen! ⭐")
+    else:
+        print("\nHelaas! Je hebt niet gewonnen!")
+    print(f"You got {num_correct} correct out of {num} questions")
 
 
 def prepare_questions(path, num_questions):
@@ -56,7 +60,7 @@ def ask_question(question):
 
 
 def get_answers(question, alternatives, num_choices=1, hint=None):
-    print(f"{question}?")
+    print(f"{question}")
     labeled_alternatives = dict(zip(ascii_lowercase, alternatives))
     if hint:
         labeled_alternatives["?"] = "Hint"

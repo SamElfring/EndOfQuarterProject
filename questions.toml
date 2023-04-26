@@ -1,108 +1,88 @@
 [[questions]]
-question     = "When was the first known use of the word 'quiz'"
-answers      = ["1781"]
-alternatives = ["1771", "1871", "1881"]
+question     = "Welke kleur heeft 30% van de M&M’s in een normale zak M&M’s?"
+answers      = ["Bruin"]
+alternatives = ["Rood", "Geel", "Blauw"]
 
 [[questions]]
-question     = "Which built-in function can get information from the user"
-answers      = ["input"]
-alternatives = ["get", "print", "write"]
+question     = "Hoeveel frikandellen eet een Nederlander gemiddeld per jaar? "
+answers      = ["37"]
+alternatives = ["42", "50", "1000"]
 
 [[questions]]
-question = "What's the purpose of the built-in zip() function"
-answers = ["To iterate over two or more sequences at the same time"]
+question = "Welke lekkernij wordt in het Engels “Dutch Doughnut” genoemd?"
+answers = ["oliebol", "Donut"]
 alternatives = [
-    "To combine several strings into one",
-    "To compress several files into one archive",
-    "To get information from the user",
-]
+    "Stroopwafel",
+    "Hamburger"]
 
 [[questions]]
-question     = "What does dict.get(key) return if key isn't found in dict"
-answers      = ["None"]
-alternatives = ["key", "True", "False"]
+question     = "Waar komt de enige echte champagne vandaan?"
+answers      = ["Frankrijk"]
+alternatives = ["Amerika", "Spanje", "Portugal"]
 
 [[questions]]
-question = "How do you iterate over both the indices and elements in an iterable"
-answers = ["enumerate(iterable)"]
+question = "Wie knipperen er vaker met hun ogen, mannen of vrouwen?"
+answers = ["Vrouwen"]
 alternatives = [
-    "enumerate(iterable, start=1)",
-    "range(iterable)",
-    "range(iterable, start=1)",
+    "Mannen",
+    "Evenveel",
+    "Huh knipperen?",
 ]
 
 [[questions]]
-question     = "What's the official name of the := operator"
-answers      = ["Assignment expression"]
-alternatives = ["Named expression", "Walrus operator", "Colon equals operator"]
+question     = "Uit welke druivenrassen bestaat een reguliere champagne?"
+answers      = ["Chardonney, Pinot Noir, Pinot Meunier"]
+alternatives = ["Sauvignon blanc en Pinot Noir", "Chardonney", "Chardonney en Pinot Noir"]
 
 [[questions]]
-question = "What's one effect of calling random.seed(42)"
-answers = ["The random numbers are reproducible."]
+question = "Hoelang doet het ISS erover om een rondje rond de aarde te doen?"
+answers = ["1u30"]
 alternatives = [
-    "The random numbers are more random.",
-    "The computer clock is reset.",
-    "The first random number is always 42.",
+    "30 min",
+    "5u",
+    "12u",
 ]
 
 [[questions]]
-question = "When does __name__ == '__main__' equal True in a Python file"
-answers = ["When the file is run as a script"]
+question = "Wat is de heetste peper ter wereld?"
+answers = ["Carolina Reaper"]
 alternatives = [
-    "When the file is imported as a module",
-    "When the file has a valid name",
-    "When the file only has one function",
+    "Ghost pepper (Bhut Jolokia)",
+    "Trinidad Moruga Scorpion",
+    "Naga Viper",
 ]
 
 [[questions]]
-question     = "Which version of Python is the first with TOML support built in"
-answers      = ["3.11"]
-alternatives = ["3.9", "3.10", "3.12"]
+question     = "Wat is het hoofdingrediënt van bier?"
+answers      = ["Water"]
+alternatives = ["Hop", "Alcohol", "Graan"]
 
 [[questions]]
-question     = "What's the name of the list-like data structure in TOML"
-answers      = ["Array"]
-alternatives = ["List", "Sequence", "Set"]
+question     = "Hoeveel zintuigen heeft een mens?"
+answers      = ["5"]
+alternatives = ["6", "7", "4"]
 
 [[questions]]
-question     = "How can you run a Python script named quiz.py"
-answers      = ["python quiz.py", "python -m quiz"]
-alternatives = ["python quiz", "python -m quiz.py"]
-hint         = "One option uses the filename, and the other uses the module name."
+question     = "In welk land worden de meeste ijsjes gegeten?"
+answers      = ["Noorwegen"]
+alternatives = ["Amerika", "Nederland"]
 
 [[questions]]
-question = "What's a PEP"
-answers = ["A Python Enhancement Proposal"]
+question = "Waar vindt de meeste alcohol consumptie ter wereld per inwoner plaats?"
+answers = ["Moldavië"]
 alternatives = [
-    "A Pretty Exciting Policy",
-    "A Preciously Evolved Python",
-    "A Potentially Epic Prize",
+    "Rusland",
+    "Nederland",
+    "Frankrijk",
 ]
-hint = "PEPs are used to evolve Python."
-explanation = """
-    Python Enhancement Proposals (PEPs) are design documents that provide
-    information to the Python community. PEPs are used to propose new features
-    for the Python language, to collect community input on an issue, and to
-    document design decisions made about the language.
-"""
 
 [[questions]]
-question = "How can you add a docstring to a function"
-answers = [
-    "By writing a string literal as the first statement in the function",
-    "By assigning a string to the function's .__doc__ attribute",
-]
+question = "Welk Italiaans gerecht betekent letterlijk “trek mij omhoog”?"
+answers = ["Tiramisu"]
 alternatives = [
-    "By using the built-in @docstring decorator",
-    "By returning a string from the function",
+    "Pizza",
+    "Cannoli",
+    "Panna cotta"
 ]
-hint = "They are parsed from your code and stored on the function object."
-explanation = """
-    Docstrings document functions and other Python objects. A docstring is a
-    string literal that occurs as the first statement in a module, function,
-    class, or method definition. Such a docstring becomes the .__doc__ special
-    attribute of that object. See PEP 257 for more information.
 
-    There is no built-in @docstring decorator. Many functions naturally return
-    strings. Such a feature can therefore not be used for docstrings.
-"""
+
