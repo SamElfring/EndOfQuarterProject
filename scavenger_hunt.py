@@ -1,5 +1,8 @@
 import scavenger_hunt_answers as sha
 import os
+import subprocess
+
+
 sh_title ="""
  _____                                             _   _             _   
 /  ___|                                           | | | |           | |  
@@ -20,6 +23,7 @@ The team that guesses the password first wins the game.""")
     return
 
 def guess_password(object_codes_list):
+    attempts = 3
     print("""
 Congratulations on making it this far!
 You've entered every code and now you have to guess the password.
@@ -32,14 +36,32 @@ You can create the password by combining every code you've entered in a logical 
             victory()
             exit()
         else:
-            print(f"Your guess is incorrect, please try again! \n\nReminder: {object_codes_list}")
+            print(f"\nYour guess is incorrect, {attempts -1} attempt(s) left ")
+            if attempts > 0:
+                print(f"\nReminder: {object_codes_list}")
+
+            attempts -= 1
+            if attempts == 0:
+                print("""
+Too many failed attempts, your list will be cleared now.
+
+IT'S THE OPPOSING TEAM'S TURN NOW! (if they're present)""")
+                failed_attempt = 1
+                return failed_attempt
+                
 
 def victory():
     print("Victory!")
     #TODO add 1 point to the winning team
 
+
+
+
 def scavenger_hunt_main():
-    os.system("xdg-open SH_Locations.png") #FIXME
+    subprocess.Popen(
+    ['xdg-open', "SH_Locations.png"],
+    stdout=subprocess.DEVNULL,
+    stderr=subprocess.DEVNULL)
     print(sh_title)
     print("Welcome to the scavenger hunt!")
     print_game_rules()
@@ -66,7 +88,7 @@ Please select an option: """))
 
         elif menu_input == 2:
             while True:
-                t1_add_code = input("\nEnter the code written on the item you've hunted (enter 'exit' to return to the menu): ")
+                t1_add_code = input("\nEnter the code written on the item you've hunted [case sensitive] (enter 'exit' to return to the menu): ")
 
                 if t1_add_code.lower() == "exit":
                     break
@@ -83,7 +105,7 @@ Please select an option: """))
                         break
 
                 else:
-                    print("\nPlease correctly enter the code written on the object! (case sensitive)")
+                    print("\nPlease correctly enter the code written on the object! [case sensitive]")
 
         elif menu_input == 3:
             oprint_obtained_codes = print(f"These are the codes you've obtained so far: {t1_object_codes_list}")
@@ -92,7 +114,7 @@ Please select an option: """))
         
         elif menu_input == 4:
             while True:
-                t2_add_code = input("\nEnter the code written on the item you've hunted (enter 'exit' to return to the menu): ")
+                t2_add_code = input("\nEnter the code written on the item you've hunted [case sensitive] (enter 'exit' to return to the menu): ")
 
                 if t2_add_code.lower() == "exit":
                     break
@@ -109,7 +131,7 @@ Please select an option: """))
                         break
 
                 else:
-                    print("\nPlease correctly enter the code written on the object! (case sensitive)")
+                    print("\nPlease correctly enter the code written on the object! [case sensitive]")
 
         elif menu_input == 5:
             oprint_obtained_codes = print(f"These are the codes you've obtained so far: {t2_object_codes_list}")
@@ -118,9 +140,20 @@ Please select an option: """))
 
         elif menu_input == 6:
             if len(t1_object_codes_list) == 4:
-                guess_password(t1_object_codes_list)
+                t1_attempt = guess_password(t1_object_codes_list)
+                if t1_attempt == 1:
+                    t1_object_codes_list.clear()
+                    t1_attempt = 0
             elif len(t2_object_codes_list) == 4:
-                guess_password(t2_object_codes_list)
+                t2_attempt = guess_password(t2_object_codes_list)
+                if t2_attempt == 1:
+                    t2_object_codes_list.clear()
+                    t2_attempt = 0
             else:
                 print("\nNone of the lists are complete yet, please add all the codes to your team's list!")
+
+        
+
+        
+
 scavenger_hunt_main()
