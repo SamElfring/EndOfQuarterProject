@@ -22,7 +22,7 @@ When you've added every code to the list you're able to guess the password.
 The team that guesses the password first wins the game.""")
     return
 
-def guess_password(object_codes_list):
+def guess_password(object_codes_list, team1 = None, team2 = None):
     attempts = 3
     print("""
 Congratulations on making it this far!
@@ -191,14 +191,14 @@ IT'S THE OPPOSING TEAM'S TURN NOW! (if they're present)""")
 
         elif menu_input == 7:
             if len(t1_object_codes_list) == 4:
-                t1_attempt = guess_password(t1_object_codes_list)
+                t1_attempt = guess_password(t1_object_codes_list, team1)
                 if t1_attempt == True:
                     break
                 if t1_attempt == 1:
                     t1_object_codes_list.clear()
                     t1_attempt = 0
             elif len(t2_object_codes_list) == 4:
-                t2_attempt = guess_password(t2_object_codes_list)
+                t2_attempt = guess_password(t2_object_codes_list, team2)
                 if t2_attempt == True:
                     break
                 if t2_attempt == 1:
