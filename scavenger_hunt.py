@@ -1,4 +1,7 @@
 import scavenger_hunt_answers as sha
+import os
+
+#TODO add ASCII logo
 
 def print_game_rules():
     print(
@@ -23,14 +26,15 @@ You can create the password by combining every code you've entered in a logical 
         else:
             print(f"Your guess is incorrect, please try again! \n\nReminder: {object_codes_list}")
 
-
 def victory():
     print("Victory!")
-    #add 1 point to the winning team
+    #TODO add 1 point to the winning team
 
 def scavenger_hunt_main():
+    os.system("xdg-open SH_1.png") #FIXME
     print("Welcome to the scavenger hunt!")
     print_game_rules()
+
 
     t1_object_codes_list = []
     t2_object_codes_list = []
