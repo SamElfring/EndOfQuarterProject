@@ -27,10 +27,10 @@ RESULTS = """\n
 
 MANUAL = """\nOur project consist out of 4 small minigames.
 These minigames are
-    - Quiz (1 point per answer)
     - Higher Lower (1 point per answer)
     - Connect Four (5 points for the winner)
     - Scavenger Hunt (5 points for the winner)
+    - Quiz (1 point per answer)
 
 The two teams will play each other for points,
 the team with the most points at the end is the winner!    
@@ -52,6 +52,7 @@ def main():
     next_game("Connect Four")
     connect_four.play(team1, team2)
 
+    next_game("Scavenger Hunt")
     scavenger_hunt.scavenger_hunt_main(team1, team2)
 
     print("This round is only for team " + team1["name"])
