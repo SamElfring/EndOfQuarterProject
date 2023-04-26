@@ -1,7 +1,15 @@
 import scavenger_hunt_answers as sha
 import os
-
-#TODO add ASCII logo
+sh_title ="""
+ _____                                             _   _             _   
+/  ___|                                           | | | |           | |  
+\ `--.  ___ __ ___   _____ _ __   __ _  ___ _ __  | |_| |_   _ _ __ | |_ 
+ `--. \/ __/ _` \ \ / / _ \ '_ \ / _` |/ _ \ '__| |  _  | | | | '_ \| __|
+/\__/ / (_| (_| |\ V /  __/ | | | (_| |  __/ |    | | | | |_| | | | | |_ 
+\____/ \___\__,_| \_/ \___|_| |_|\__, |\___|_|    \_| |_/\__,_|_| |_|\__|
+                                  __/ |                                  
+                                 |___/                                   
+"""
 
 def print_game_rules():
     print(
@@ -31,13 +39,14 @@ def victory():
     #TODO add 1 point to the winning team
 
 def scavenger_hunt_main():
-    os.system("xdg-open SH_1.png") #FIXME
+    os.system("xdg-open SH_Locations.png") #FIXME
+    print(sh_title)
     print("Welcome to the scavenger hunt!")
     print_game_rules()
 
-
     t1_object_codes_list = []
     t2_object_codes_list = []
+
     while True:
         try:
             menu_input = int(input("""
