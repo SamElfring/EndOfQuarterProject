@@ -64,6 +64,6 @@ def play_higher_lower(team1, team2):
     else:
         print(f"\nThe game ended in a tie with a score of {team1_score} to {team2_score}!")
 
-    team1["points"] = team1_score
-    team2["points"] = team2_score
+    team1["points"] += team1_score
+    team2["points"] += team2_score
     return
