@@ -33,9 +33,14 @@ You have 3 attempts, if you've failed all attempts, your list will be cleared.""
 
     while True:
         password_input = input("Enter the password: ")
-        if password_input == sha.t1_password_input or password_input == sha.t2_password_input:
-            victory()
-            exit()
+        if password_input == sha.t1_password_input:
+            team1["points"] += 5
+            print(team1["name"] + " has won!")
+            return True
+        elif password_input == sha.t2_password_input:
+            team2["points"] += 5
+            print(team2["name"] + " has won!")
+            return True
         else:
             print(f"\nYour guess is incorrect, {attempts -1} attempt(s) left ")
             if attempts > 0:
@@ -50,13 +55,6 @@ IT'S THE OPPOSING TEAM'S TURN NOW! (if they're present)""")
                 attempts = 3
                 failed_attempt = 1
                 return failed_attempt
-                
-
-def victory():
-    print("Victory!")
-    #TODO add 1 point to the winning team
-
-
 
 
 def scavenger_hunt_main(team1, team2):
@@ -194,11 +192,15 @@ IT'S THE OPPOSING TEAM'S TURN NOW! (if they're present)""")
         elif menu_input == 7:
             if len(t1_object_codes_list) == 4:
                 t1_attempt = guess_password(t1_object_codes_list)
+                if t1_attempt == True:
+                    break
                 if t1_attempt == 1:
                     t1_object_codes_list.clear()
                     t1_attempt = 0
             elif len(t2_object_codes_list) == 4:
                 t2_attempt = guess_password(t2_object_codes_list)
+                if t2_attempt == True:
+                    break
                 if t2_attempt == 1:
                     t2_object_codes_list.clear()
                     t2_attempt = 0
